@@ -272,4 +272,4 @@ for i in range(0, 662):
 open('flag.png', 'wb').write(output)
 ```
 This is the flag:
-![Flag result](https://raw.githubusercontent.com/nguyenthienanh05/nguyenthienanh05.github.io/main/assets/images/flag.png)
+![Flag result](https://raw.githubusercontent.com/nguyenthienanh05/nguyenthienanh05.github.io/main/assets/img/flag.png)
