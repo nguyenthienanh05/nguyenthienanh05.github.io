@@ -214,7 +214,7 @@ with open('final_bytes', 'wb') as f:
     f.write(a)
 ```
 
-Then I reverse reverse the final parts and get the flag
+Then I reverse the final parts and get the flag:
 ```python
 VAR_FILE_INPUT = open('final_bytes', 'rb').read().strip()
 output = b''
