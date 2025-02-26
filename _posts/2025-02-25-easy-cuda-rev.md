@@ -45,7 +45,7 @@ unsigned __int64 __fastcall encrypt_kernel(unsigned __int8 *a1, char a2)
   return __device_stub__Z14encrypt_kernelPhh(a1, a2);
 }
 ```
-This mean that the PTX Assembly of Cuda cannot be disassembled and read by IDA. After searching, I found the using the `nvidia-cuda-toolkit` we can dump the disassembled PTX Assembly by using `cuobjdump easy_cuda -sass -ptx`. After doing that and some cleaning up, you'll get the PTX Assembly instructions like this [LINK](https://github.com/nguyenthienanh05/Aliyun-CTF-2025/blob/main/encrypt.asm)
+This mean that the PTX Assembly of Cuda cannot be disassembled and read by IDA. After searching, I found the using the `nvidia-cuda-toolkit` we can dump the disassembled PTX Assembly by using `cuobjdump easy_cuda -sass -ptx`. After doing that and some cleaning up, you'll get the PTX Assembly instructions (which you'll find in this [LINK](https://github.com/nguyenthienanh05/Aliyun-CTF-2025/blob/main/encrypt.asm))
 
 The we start to analyze the PTX ASSEMBLY, we see that it performs totally 5 transformations on the each chunk of 256 bytes simultaneously. I've translated the PTX Assembly of the first transformation into this:
 ```cpp
@@ -85,7 +85,7 @@ int main() {
     }
 }
 ```
-And the second transformation is like this for each chunk:
+And the second transformation is like the below for each chunk:
 ```cpp
     const int key = 0xAC;
     for (int i = 255; i >= 0; j++)
@@ -202,7 +202,7 @@ int main(void) {
 ```
 Then copy input to a .txt file I use this python code to process it into a bytes file:
 ```python
-with open('parts_byte.txt', 'r') as f:
+with open('output.txt', 'r') as f:
     a = f.read()
 a = bytes.fromhex(a)
 chunks = [a[i:i+4] for i in range(0, len(a), 4)]
