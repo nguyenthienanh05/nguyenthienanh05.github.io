@@ -9,7 +9,7 @@ tags: [Writeup]
 **Challenge Description(English translated):**
 Recently, inspired by DeepSeek's direct use of PTX assembly to write optimized portions of cuda code, a simple cuda inverse question was designed to allow the contestants to learn PTX assembly and come out way ahead!
 
-(The challenge file is available on my Github repo [HERE](https://github.com/nguyenthienanh05/Aliyun-CTF-2025).
+(The challenge file is available on my Github repo [HERE](https://github.com/nguyenthienanh05/Aliyun-CTF-2025)).
 
 Firstly, I use IDA to analyze the given file of the challenge:
 ```c
