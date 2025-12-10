@@ -1,8 +1,8 @@
 ---
-title: "Aliyun CTF 2025 - easy cuda rev"
+title: "[Aliyun CTF 2025] - easy cuda rev"
 date: 2025-02-24 23:18:00 +0700
 categories: "RE"
-tags: [Writeup]
+tags: [Writeup, Reverse]
 ---
 
 # Easy Cuda Rev
